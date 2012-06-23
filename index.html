@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>LÖVE Boilerplate (love2d) by dschneider</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>LÖVE Boilerplate (love2d)</h1>
+        <h2>A boilerplate template for the awesome LÖVE (love2d) framework</h2>
+        <a href="https://github.com/dschneider/love-boilerplate" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>Welcome to LÖVE Boilerplate</h1>
+
+<h2>Overview</h2>
+
+<p>LÖVE Boilerplate offers a pre-defined best-practice folder structure for your LÖVE projects. Furthermore it comes with a variety of tools like a bundler script that automatically packages your project into a LÖVE app - right now it's only available on *nix systems, but Windows will follow. 
+It also includes third party libraries like AnAL, an animation library for LÖVE, as well as the gamestate library from the Hump project which makes it possible to divide your game into several gamestates for easier maintenance and a clearer structure. Quickie, a neat GUI framework is included as well. In the future my own 2D lighting engine (LÜMOS) will be part of the project as well.
+There are also some other classes included: a camera, a player, a world, the game gamestate and a pre-filled main.lua file so that you can directly start off with your own LÖVE project!</p>
+
+<h2>Components and features</h2>
+
+<h3>Core classes and entities</h3>
+
+<ul>
+<li>
+<strong>Camera</strong> - offers a fully featured camera class with parallax background scrolling support (written by Michael Ebens and slightly modified by me, <a href="http://nova-fusion.com/">Website</a>)</li>
+<li>
+<strong>World</strong> - represents the world of your game which holds all the objects, structures, enemies …</li>
+<li>
+<strong>Player</strong> - represents the player of the game</li>
+</ul><h3>States</h3>
+
+<ul>
+<li>
+<strong>Game</strong> - this is the main gamestate in which the actual game logic takes place</li>
+</ul><h3>Third party libraries</h3>
+
+<ul>
+<li>
+<strong>AnAL</strong> - An animation library helping you to animate the different pieces of your game (written by Bart Bes. <a href="https://love2d.org/wiki/AnAL">Code &amp; Documentation</a>)</li>
+<li>
+<strong>Hump (Gamestate)</strong> - Makes it possible to divide your game into different gamestates, like main menu, pause menu, game … (written by Matthias Richter aka vrld. <a href="https://github.com/vrld/Hump">Code &amp; Documentation</a>)</li>
+<li>
+<strong>Quickie</strong> - An immediate mode gui library for assembling the user interfaces of your game (written by Matthias Richter aka vrld. <a href="https://github.com/vrld/Quickie">Code &amp; Documentation</a>)</li>
+</ul><h3>Bundler</h3>
+
+<p>Recursively zips your game and turns it into a LÖVE app with one press of a button. After that your game is directly executed so you can test it immediately.</p>
+
+<h3>Pre-defined folder structure</h3>
+
+<ul>
+<li><strong>main.lua</strong></li>
+<li>
+<strong>levels</strong> - contains the level files</li>
+<li>
+<strong>lib</strong> - contains all the libraries for your LÖVE project
+
+<ul>
+<li>
+<strong>core</strong> - contains the core libraries, like camera and world</li>
+<li>
+<strong>entities</strong> - contains entities, like player, enemies …</li>
+<li>
+<strong>states</strong> - contains the gamestates</li>
+<li>
+<strong>vendor</strong> - contains third party libraries
+
+<ul>
+<li><strong>anal</strong></li>
+<li><strong>hump</strong></li>
+<li><strong>quickie</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<strong>media</strong> - contains all your media
+
+<ul>
+<li>
+<strong>audio</strong> - contains audio related media
+
+<ul>
+<li>
+<strong>effects</strong> - contains sound effects (jumping, shooting, …)</li>
+<li>
+<strong>music</strong> - contains the game music</li>
+</ul>
+</li>
+<li>
+<strong>fonts</strong> - contains all the game fonts</li>
+<li>
+<strong>images</strong> - contains all the images
+
+<ul>
+<li>
+<strong>effects</strong> - contains effect images (jumping, shooting, …)</li>
+<li>
+<strong>entities</strong> - contains images for player, enemies etc.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<strong>bundle.sh</strong> - the bundler (a simple bash script)</li>
+</ul><h3>Object-oriented paradigm</h3>
+
+<p>The project aims at an object-oriented architecture which makes it easier to transform your game idea into an actual game. Therefore everything is an instantiable class in the project (excluding the third party libraries).</p>
+
+<h2>Things to come</h2>
+
+<ul>
+<li>Bundler for Windows</li>
+<li>More configuration options for the bundler, maybe even with a real platform-independent GUI</li>
+<li>Sample Project (I am working on a game right now that uses the template, its code-name is "Lava Temple"). Stay tuned!</li>
+<li>Tutorials</li>
+<li>Game states and classes for menus and transitions so that you can build an intro for your game as well</li>
+<li>More libraries for networking and 2D lighting</li>
+<li>A better class system with inheritance and base classes that offer standard functionality like getting the vertices of an object and getters / setters for attributes</li>
+<li>VIM scripts aiming to make your life easier when coding a LÖVE project</li>
+<li>Unit testing framework for your projects</li>
+</ul><h2>Contribution</h2>
+
+<p>You are very welcome to contribute to the project. Just fork the project, work on your feature and create a pull request to get it in. In that way we get a chance to discuss and review the changes. Also try to keep the coding style I have used in the project so far and stick to the object-oriented approach.</p>
+
+<p>This project aims to help people learning Lua / LÖVE as well. Therefore everything should be publicly available, changeable and reusable (third party libraries excluded as they contain their own licenses).</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/dschneider/love-boilerplate/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/dschneider/love-boilerplate/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/dschneider/love-boilerplate"></a> is maintained by <a href="https://github.com/dschneider">dschneider</a>.</p>
+
+          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
