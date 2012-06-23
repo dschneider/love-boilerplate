@@ -50,7 +50,7 @@ function Camera:new(x, y, scale_x, scale_y, rotation, object)
   object.y = y
   object.scale_x = scale_x or 1
   object.scale_y = scale_y or 1
-  object.rotation = rotation or 1
+  object.rotation = rotation or 0
   object.layers = {}
 
   return object
