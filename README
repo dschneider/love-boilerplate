@@ -8,7 +8,7 @@ There are also some other classes included: a camera, a player, a world, the gam
 
 #### Components and features
 
-###### Core classes and entities
+##### Core classes and entities
 
 * **Camera** - offers a fully featured camera class with parallax background scrolling support (written by Michael Ebens and slightly modified by me, [Website](http://nova-fusion.com/))
 * **World** - represents the world of your game which holds all the objects, structures, enemies …
